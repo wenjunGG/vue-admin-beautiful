@@ -60,12 +60,12 @@ const actions = {
     return new Promise((resolve) => {
       getRouterList()
         .then((res) => {
-          let accessRoutes = filterRoutes(res.data);
-          accessRoutes.push({
+          res.data.push({
             path: "*",
             redirect: "/404",
             hidden: true,
           });
+          let accessRoutes = filterRoutes(res.data);
           commit("SET_ALL_ROUTES", accessRoutes);
           resolve(accessRoutes);
         })
