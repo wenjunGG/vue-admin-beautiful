@@ -38,7 +38,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 99;
+  z-index: 97;
   &:hover {
     .octo-arm {
       animation: octocat-wave 560ms ease-in-out;

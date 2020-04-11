@@ -542,13 +542,16 @@ export default {
       font-size: 14px;
       &:first-child {
         text-align: right;
-        width: 30%;
+        width: 50%;
       }
     }
   }
   .bottom-btn {
     margin-top: 10px;
     float: right;
+    button {
+      margin: 5px;
+    }
   }
 }
 </style>
