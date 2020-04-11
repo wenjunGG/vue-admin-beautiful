@@ -263,13 +263,6 @@ html {
       padding: 2px 5px;
       color: $base-color-black;
       font-weight: normal;
-      &.is-background {
-        .el-pager {
-          li:not(.disabled).active {
-            background-color: $base-color-blue;
-          }
-        }
-      }
     }
 
     /*分页结束*/
@@ -302,59 +295,11 @@ html {
       padding: 8px 20px;
       border-radius: $base-border-radius;
       font-size: $base-font-size-default;
-
       button:hover::before {
         transform-origin: center;
         transform: scaleX(1);
       }
-
-      &--primary {
-        color: $base-color-white;
-        background-color: $base-color-blue;
-        border-color: $base-color-blue;
-
-        &:focus {
-          color: $base-color-white;
-          background-color: $base-color-blue;
-          border-color: $base-color-blue;
-        }
-        &:hover {
-          color: $base-color-white;
-          background-color: rgba($base-color-blue, 0.9);
-          border-color: rgba($base-color-blue, 0.9);
-        }
-      }
-
-      &--warning {
-        color: $base-color-white;
-
-        &:focus {
-          color: $base-color-white;
-        }
-      }
-
-      &--danger {
-        color: $base-color-white;
-        background-color: $base-color-red;
-        border-color: $base-color-red;
-
-        &:focus {
-          color: $base-color-white;
-          background-color: $base-color-red;
-          border-color: $base-color-red;
-        }
-        &:hover {
-          color: $base-color-white;
-          background-color: rgba($base-color-red, 0.9);
-          border-color: rgba($base-color-red, 0.9);
-        }
-      }
     }
-
-    .el-button--mini {
-      padding: 7px 15px;
-    }
-
     /*按钮结束*/
     /*弹窗开始*/
     .el-dialog {

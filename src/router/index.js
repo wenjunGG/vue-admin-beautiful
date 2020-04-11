@@ -131,6 +131,12 @@ export const asyncRoutes = [
         meta: { title: "表格" },
       },
       {
+        path: "form",
+        name: "Form",
+        component: () => import("@/views/byui/form/index"),
+        meta: { title: "表单" },
+      },
+      {
         path: "tree",
         name: "Tree",
         component: () => import("@/views/byui/tree/index"),

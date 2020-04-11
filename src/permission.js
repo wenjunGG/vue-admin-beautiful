@@ -30,6 +30,11 @@ router.beforeEach(async (to, from, next) => {
             accessRoutes = await store.dispatch("permission/setAllRoutes");
           }
           router.addRoutes(accessRoutes);
+          /*console.log(to);
+          let obj1 = { ...to };
+          let obj2 = { replace: true };
+          console.log(Object.assign(obj1, obj2));
+          console.log({ ...to, replace: true });*/
           next({ ...to, replace: true });
         } catch (error) {
           await store.dispatch("user/resetToken");
