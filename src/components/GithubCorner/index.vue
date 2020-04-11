@@ -39,9 +39,12 @@ export default {
   top: 0;
   right: 0;
   z-index: 97;
+  .octo-arm {
+    animation: octocat-wave 560ms ease-in-out infinite;
+  }
   &:hover {
     .octo-arm {
-      animation: octocat-wave 560ms ease-in-out;
+      animation: octocat-wave 560ms ease-in-out infinite;
     }
   }
   .github-color {
@@ -62,16 +65,6 @@ export default {
   40%,
   80% {
     transform: rotate(10deg);
-  }
-}
-
-@media (max-width: 500px) {
-  .github-corner:hover .octo-arm {
-    animation: none;
-  }
-
-  .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
   }
 }
 </style>
