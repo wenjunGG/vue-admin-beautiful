@@ -134,27 +134,23 @@
             <a @click="handleChangeTheme">
               <el-button type="primary">修改主题和布局</el-button>
             </a>
-            &nbsp;&nbsp;&nbsp;
             <a
               target="_blank"
               href="//shang.qq.com/wpa/qunwpa?idkey=00db5d4f8037fb577d128c2654de0bef68d32e55a41431b07a08a1d4446bb587"
             >
               <el-button type="primary">讨论群</el-button>
             </a>
-            &nbsp;&nbsp;&nbsp;
             <a
               target="_blank"
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
             >
               <el-button type="primary">源码获取</el-button>
             </a>
-            &nbsp;&nbsp;&nbsp;
             <a
               target="_blank"
               href="https://chu1204505056.gitee.io/byui-bookmarks/guide/"
             >
               <el-button type="primary">文档</el-button>
-              &nbsp;&nbsp;&nbsp;
             </a>
             <!--<a
               target="_blank"
@@ -173,7 +169,7 @@
 import byuiChart from "@/plugins/echarts";
 import byuiCount from "@/plugins/byuiCount";
 import { dependencies, devDependencies } from "../../../package.json";
-import ByuiFaultText from "@/components/ByuiFaultText";
+
 export default {
   name: "Index",
   components: {
@@ -322,13 +318,13 @@ export default {
                   return arr[index];
                 },
                 /*color: function() {
-                                                                    return `rgb(
-                                                                    ${Math.round(
-                                                                        Math.random() * 255
-                                                                    )} , ${Math.round(
-                                                                        Math.random() * 255
-                                                                    )} , ${Math.round(Math.random() * 255)} )`;
-                                                                }*/
+                                                                      return `rgb(
+                                                                      ${Math.round(
+                                                                          Math.random() * 255
+                                                                      )} , ${Math.round(
+                                                                          Math.random() * 255
+                                                                      )} , ${Math.round(Math.random() * 255)} )`;
+                                                                  }*/
               },
             },
             data: [
@@ -501,16 +497,19 @@ export default {
   ::v-deep {
     .el-card__body {
       height: 200px;
+
       .echarts {
         width: 100%;
         height: 140px;
       }
     }
   }
+
   .card {
     ::v-deep {
       .el-card__body {
         height: 305px;
+
         .echarts {
           width: 100%;
           height: 100%;
@@ -518,6 +517,7 @@ export default {
       }
     }
   }
+
   .bottom {
     margin-top: 5px;
     height: 40px;
@@ -526,11 +526,13 @@ export default {
     text-align: left;
     color: #595959;
   }
+
   .table {
     width: 100%;
     background-color: #fff;
     color: #666;
     border-collapse: collapse;
+
     td {
       border-width: 1px;
       border-style: solid;
@@ -540,17 +542,19 @@ export default {
       min-height: 20px;
       line-height: 20px;
       font-size: 14px;
+
       &:first-child {
         text-align: right;
         width: 50%;
       }
     }
   }
+
   .bottom-btn {
-    margin-top: 10px;
     float: right;
+    margin-top: 5px;
     button {
-      margin: 5px;
+      margin: 5px 0 5px 10px;
     }
   }
 }
