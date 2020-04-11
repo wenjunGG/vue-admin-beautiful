@@ -5,7 +5,7 @@ const data = [
     redirect: "/index",
     children: [
       {
-        path: "/index",
+        path: "index",
         name: "Index",
         component: "index/index",
         meta: {
@@ -23,10 +23,23 @@ const data = [
     redirect: "noRedirect",
     children: [
       {
-        path: "/test",
+        path: "test",
         name: "Test",
         component: "test/index",
-        meta: { title: "test", icon: "marker" },
+        meta: { title: "Webstorm最新版激活", icon: "marker" },
+      },
+    ],
+  },
+  {
+    path: "/permission",
+    component: "Layout",
+    redirect: "noRedirect",
+    children: [
+      {
+        path: "permission",
+        name: "Permission",
+        component: "byui/permission/index",
+        meta: { title: "权限控制", icon: "user-shield" },
       },
     ],
   },
@@ -35,7 +48,7 @@ const data = [
     component: "Layout",
     redirect: "noRedirect",
     name: "Byui",
-    meta: { title: "组件库", icon: "cloud" },
+    meta: { title: "组件库", icon: "cloud", roles: ["admin"] },
     children: [
       {
         path: "codeGenerator",
@@ -44,22 +57,22 @@ const data = [
         meta: { title: "代码生成机" },
       },
       {
-        path: "smallComponents",
-        name: "SmallComponents",
-        component: "byui/smallComponents/index",
-        meta: { title: "小组件" },
-      },
-      {
         path: "news",
         name: "News",
         component: "byui/news/index",
         meta: { title: "新闻" },
       },
-      {
+      /*{
         path: "markdown",
         name: "Markdown",
         component: "byui/markdown/index",
         meta: { title: "markdown阅读器" },
+      },*/
+      {
+        path: "smallComponents",
+        name: "SmallComponents",
+        component: "byui/smallComponents/index",
+        meta: { title: "小组件" },
       },
       {
         path: "icon",
@@ -90,6 +103,12 @@ const data = [
         name: "Table",
         component: "byui/table/index",
         meta: { title: "表格" },
+      },
+      {
+        path: "form",
+        name: "Form",
+        component: "byui/form/index",
+        meta: { title: "表单" },
       },
       {
         path: "tree",
@@ -128,12 +147,12 @@ const data = [
         component: "byui/loading/index",
         meta: { title: "loading" },
       },
-      {
+      /*{
         path: "player",
         name: "Player",
         component: "byui/player/index",
         meta: { title: "视频播放器", noCache: true },
-      },
+      },*/
       {
         path: "editor",
         name: "Editor",
@@ -171,6 +190,16 @@ const data = [
         meta: { title: "错误日志模拟" },
       },
     ],
+  },
+  {
+    path: "/401",
+    component: "401",
+    meta: { title: "401错误页演示", icon: "bug" },
+  },
+  {
+    path: "/404",
+    component: "404",
+    meta: { title: "404错误页演示", icon: "bug" },
   },
 ];
 export default [

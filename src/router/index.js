@@ -49,7 +49,7 @@ export const asyncRoutes = [
     redirect: "noRedirect",
     children: [
       {
-        path: "/test",
+        path: "test",
         name: "Test",
         component: () => import("@/views/test/index"),
         meta: { title: "Webstorm最新版激活", icon: "marker" },
@@ -65,7 +65,7 @@ export const asyncRoutes = [
         path: "permission",
         name: "Permission",
         component: () => import("@/views/byui/permission/index"),
-        meta: { title: "权限控制", icon: "marker" },
+        meta: { title: "权限控制", icon: "user-shield" },
       },
     ],
   },
@@ -226,11 +226,6 @@ export const asyncRoutes = [
     path: "/404",
     component: () => import("@/views/404"),
     meta: { title: "404错误页演示", icon: "bug" },
-  },
-  {
-    path: "*",
-    redirect: "/404",
-    hidden: true,
   },
 ];
 const createRouter = () =>
