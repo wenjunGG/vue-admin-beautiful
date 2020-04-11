@@ -1,12 +1,12 @@
 <template>
   <div id="tags-view-container" class="tags-view-container">
     <byui-icon
-      @click="handleScroll('left')"
       class="tags-icon"
       :icon="['fas', 'angle-double-left']"
+      @click="handleScroll('left')"
     >
     </byui-icon>
-    <scroll-pane class="tags-content" ref="scrollPane" @contextmenu.stop>
+    <scroll-pane ref="scrollPane" class="tags-content" @contextmenu.stop>
       <span>
         <router-link
           v-for="(item, index) in visitedViews"
@@ -33,9 +33,9 @@
       </span>
     </scroll-pane>
     <byui-icon
-      @click="handleScroll('right')"
       class="tags-icon"
       :icon="['fas', 'angle-double-right']"
+      @click="handleScroll('right')"
     >
     </byui-icon>
     <ul

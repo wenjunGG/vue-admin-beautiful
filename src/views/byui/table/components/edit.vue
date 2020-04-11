@@ -2,8 +2,8 @@
   <el-dialog
     :title="title"
     :visible.sync="dialogFormVisible"
-    @close="close"
     width="500px"
+    @close="close"
   >
     <el-form :model="form" label-width="80px">
       <el-form-item label="标题">

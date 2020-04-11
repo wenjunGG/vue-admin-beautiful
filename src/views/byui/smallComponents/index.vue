@@ -19,9 +19,9 @@
           <div slot="header">
             <span>profile</span>
             <el-button
-              @click="handleProfile"
               style="float: right; padding: 3px 0;"
               type="text"
+              @click="handleProfile"
               >重载
             </el-button>
           </div>
@@ -37,15 +37,15 @@
           <div slot="header">
             <span>solidText</span>
             <el-button
-              @click="handleSolidText"
               style="float: right; padding: 3px 0;"
               type="text"
+              @click="handleSolidText"
               >重载
             </el-button>
           </div>
           <byui-solid-text
-            text="我爱自由"
             v-if="solidTextShow"
+            text="我爱自由"
           ></byui-solid-text>
         </el-card>
       </el-col>
@@ -54,13 +54,13 @@
           <div slot="header">
             <span>faultText</span>
             <el-button
-              @click="handleFaultText"
               style="float: right; padding: 3px 0;"
               type="text"
+              @click="handleFaultText"
               >重载
             </el-button>
           </div>
-          <byui-fault-text v-if="faultTextShow" text="我爱自由" ref="faultText">
+          <byui-fault-text v-if="faultTextShow" ref="faultText" text="我爱自由">
           </byui-fault-text>
         </el-card>
       </el-col>

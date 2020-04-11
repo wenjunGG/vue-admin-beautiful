@@ -13,7 +13,7 @@
       </el-form-item>
 
       <el-form-item>
-        <el-button @click="handleChangePermission" type="primary"
+        <el-button type="primary" @click="handleChangePermission"
           >切换权限
         </el-button>
       </el-form-item>

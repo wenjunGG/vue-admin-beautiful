@@ -1,6 +1,6 @@
 <template>
   <div class="news-container">
-    <el-select @change="handleChange" v-model="value" placeholder="请选择">
+    <el-select v-model="value" placeholder="请选择" @change="handleChange">
       <el-option
         v-for="(item, index) in options"
         :key="index"
@@ -35,12 +35,12 @@
     </el-row>
     <el-pagination
       background
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
       :current-page="pagination.page"
       :page-size="pagination.pageSize"
       layout="total, prev, pager, next"
       :total="pagination.total"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
     >
     </el-pagination>
     <el-dialog

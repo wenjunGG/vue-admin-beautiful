@@ -69,10 +69,10 @@ export default {
     TagsView,
     ByuiBackToTop,
   },
+  mixins: [ResizeMixin],
   data() {
     return {};
   },
-  mixins: [ResizeMixin],
   computed: {
     ...mapGetters(["layout", "tagsView", "collapse", "header", "device"]),
     classObj() {

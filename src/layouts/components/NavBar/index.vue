@@ -19,9 +19,9 @@
           <theme-bar></theme-bar>
           <byui-icon
             title="重载路由"
-            @click="refreshSelectedTag"
             :pulse="pulse"
             :icon="['fas', 'redo']"
+            @click="refreshSelectedTag"
           />
 
           <el-avatar :src="require('@/assets/user.gif')"></el-avatar>
@@ -31,8 +31,8 @@
           </el-tooltip>
           <byui-icon
             title="退出系统"
-            @click="logout"
             :icon="['fas', 'sign-out-alt']"
+            @click="logout"
           />
         </div>
       </el-col>

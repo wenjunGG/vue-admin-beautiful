@@ -16,8 +16,8 @@
           </div>
           <div>
             <byui-chart
-              autoresize
               ref="myLine"
+              autoresize
               :options="chart3"
               class="my-line"
             />
@@ -38,8 +38,8 @@
           <div slot="header">折线图</div>
           <div>
             <byui-chart
-              autoresize
               ref="myLine1"
+              autoresize
               :options="chart5"
               class="my-line1"
             />

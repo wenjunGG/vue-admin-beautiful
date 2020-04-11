@@ -4,10 +4,10 @@
     <el-row :gutter="15">
       <el-col :span="24">
         <el-form
-          @submit.native.prevent
           ref="form"
           :inline="true"
           label-width="80px"
+          @submit.native.prevent
         >
           <el-form-item label="图标名称">
             <el-input v-model="name"></el-input>
@@ -64,13 +64,13 @@ export default {
       tips: "",
     };
   },
-  created() {
-    this.fetchData();
-  },
   watch: {
     name() {
       this.submit();
     },
+  },
+  created() {
+    this.fetchData();
   },
   mounted() {},
   methods: {

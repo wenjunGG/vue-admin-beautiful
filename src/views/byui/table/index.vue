@@ -30,8 +30,8 @@
             <el-button
               icon="el-icon-search"
               type="primary"
-              @click="handleQuery"
               native-type="submit"
+              @click="handleQuery"
               >查询
             </el-button>
           </el-form-item>

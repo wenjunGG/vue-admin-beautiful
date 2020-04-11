@@ -2,7 +2,7 @@
   <div class="editor-container">
     <el-form ref="form" :model="form" :rules="rules" label-width="80px">
       <el-form-item label="标题" prop="title">
-        <el-input maxlength="20" v-model="form.title"></el-input>
+        <el-input v-model="form.title" maxlength="20"></el-input>
       </el-form-item>
       <el-form-item label="所属模块" prop="module">
         <el-select v-model="form.module">
@@ -12,11 +12,11 @@
       </el-form-item>
       <el-form-item label="内容" prop="content">
         <quill-editor
+          v-model="form.content"
           :style="{
             height: '400px',
             border: '1px solid ' + borderColor,
           }"
-          v-model="form.content"
           :options="editorOption"
           @blur="onEditorBlur($event)"
           @change="onEditorChange($event)"

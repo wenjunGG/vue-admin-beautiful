@@ -9,7 +9,7 @@
     <div class="upload">
       <el-alert
         :closable="false"
-        :title="`支持jpg、jpeg、png格式，单次可最多选择${this.limit}张图片，每张不可大于${this.size}M，如果大于${this.size}M会自动为您过滤`"
+        :title="`支持jpg、jpeg、png格式，单次可最多选择${limit}张图片，每张不可大于${size}M，如果大于${size}M会自动为您过滤`"
         type="info"
       >
       </el-alert>
@@ -66,8 +66,8 @@
         style="margin-left: 10px;"
         size="small"
         type="success"
-        @click="submitUpload"
         :loading="loading"
+        @click="submitUpload"
         >开始上传
       </el-button>
     </div>

@@ -68,10 +68,10 @@
           </div>
           <byui-chart
             :autoresize="true"
-            @zr:click="handleZrClick"
-            @click="handleClick"
             theme="byui-echarts-theme"
             :options="cy"
+            @zr:click="handleZrClick"
+            @click="handleClick"
           />
           <div class="bottom">
             <span

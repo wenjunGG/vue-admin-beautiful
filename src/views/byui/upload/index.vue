@@ -2,13 +2,13 @@
   <div class="upload-container">
     <el-divider content-position="left">演示环境可能无法模拟上传 </el-divider>
     <byui-upload
+      ref="byuiUpload"
       url="/upload"
       name="file"
       :limit="50"
       :size="2"
-      ref="byuiUpload"
     ></byui-upload>
-    <el-button @click="handleShow({ key: 'value' })" type="primary"
+    <el-button type="primary" @click="handleShow({ key: 'value' })"
       >模拟上传
     </el-button>
   </div>

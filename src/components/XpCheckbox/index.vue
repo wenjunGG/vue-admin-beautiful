@@ -1,5 +1,5 @@
 <template>
-  <el-checkbox :class="theme" v-model="value1" @change="change">
+  <el-checkbox v-model="value1" :class="theme" @change="change">
     <slot></slot>
   </el-checkbox>
 </template>

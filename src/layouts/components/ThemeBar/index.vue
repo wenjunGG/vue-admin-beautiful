@@ -2,8 +2,8 @@
   <span v-if="themeBar">
     <byui-icon
       title="主题配置"
-      @click="handleChangeTheme"
       :icon="['fas', 'brush']"
+      @click="handleChangeTheme"
     />
     <el-drawer
       title="主题配置"
@@ -13,7 +13,7 @@
       size="300px"
     >
       <div class="el-drawer__body">
-        <el-form :model="theme" ref="form">
+        <el-form ref="form" :model="theme">
           <el-form-item label="布局">
             <el-radio-group v-model="theme.layout">
               <el-radio-button label="vertical">纵向布局</el-radio-button>
@@ -34,6 +34,7 @@
           </el-form-item>
           <el-form-item label="菜单主题色">
             <el-color-picker
+              v-model="theme.menuBackground"
               :predefine="[
                 '#2a58ad',
                 '#001529',
@@ -44,21 +45,20 @@
                 '#a80505',
               ]"
               show-alpha
-              v-model="theme.menuBackground"
             ></el-color-picker>
           </el-form-item>
           <el-form-item label="菜单选中色">
             <el-color-picker
+              v-model="theme.menuActiveBackground"
               :predefine="['#22468a', '#1890ff', '#21e6af', '#f57e6c']"
               show-alpha
-              v-model="theme.menuActiveBackground"
             ></el-color-picker>
           </el-form-item>
           <el-form-item label="标签主题色">
             <el-color-picker
+              v-model="theme.tagViewsActiveBackground"
               :predefine="['#1890ff', '#0fd59d', '#f56c6c']"
               show-alpha
-              v-model="theme.tagViewsActiveBackground"
             ></el-color-picker>
           </el-form-item>
           <el-form-item>

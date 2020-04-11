@@ -1,6 +1,6 @@
 <template>
   <div class="markdown-container markdown-body">
-    <el-select @change="handleChange" v-model="value" placeholder="请选择">
+    <el-select v-model="value" placeholder="请选择" @change="handleChange">
       <el-option
         v-for="(item, index) in options"
         :key="index"

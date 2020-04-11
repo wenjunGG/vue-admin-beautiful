@@ -1,6 +1,6 @@
 <template>
   <div class="content" :style="styleObj">
-    <div class="snow" v-for="(item, index) in 200" :key="index"></div>
+    <div v-for="(item, index) in 200" :key="index" class="snow"></div>
   </div>
 </template>
 

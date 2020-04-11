@@ -4,10 +4,10 @@
     <el-row :gutter="15">
       <el-col :span="24">
         <el-form
-          @submit.native.prevent
           ref="form"
           :inline="true"
           label-width="80px"
+          @submit.native.prevent
         >
           <el-form-item label="图标名称">
             <el-input v-model="name"></el-input>
@@ -41,7 +41,7 @@
           style="cursor: pointer;"
           @click.native="handleCopyIcon(index, $event)"
         >
-          <svg-icon @click.stop :icon-class="item"></svg-icon>
+          <svg-icon :icon-class="item" @click.stop></svg-icon>
           <div class="icon-text">{{ item }}</div>
         </el-card>
       </el-col>
@@ -64,13 +64,13 @@ export default {
       tips: "",
     };
   },
-  created() {
-    this.fetchData();
-  },
   watch: {
     name() {
       this.submit();
     },
+  },
+  created() {
+    this.fetchData();
   },
   mounted() {},
   methods: {
