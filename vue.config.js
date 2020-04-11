@@ -26,7 +26,7 @@ const date = new Date(),
   hours = date.getHours(),
   minutes = date.getMinutes(),
   seconds = date.getSeconds(),
-  time = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  time = `"${year}-${month}-${day} ${hours}:${minutes}:${seconds}"`;
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -79,6 +79,9 @@ module.exports = {
           "window.echarts": "echarts",
           maptalks: "maptalks",
           "window.maptalks": "maptalks",
+        }),
+        new webpack.DefinePlugin({
+          "process.env.VUE_APP_UPDATE_TIME": time,
         }),
         new CompressionWebpackPlugin({
           filename: "[path].gz[query]",

@@ -103,6 +103,9 @@
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>版本信息</span>
+            <div style="float: right; margin-top: -18px;">
+              系统部署时间:{{ updateTime }}
+            </div>
           </div>
           <table class="table">
             <tr>
@@ -169,7 +172,6 @@
 import byuiChart from "@/plugins/echarts";
 import byuiCount from "@/plugins/byuiCount";
 import { dependencies, devDependencies } from "../../../package.json";
-
 export default {
   name: "Index",
   components: {
@@ -178,6 +180,7 @@ export default {
   },
   data() {
     return {
+      updateTime: process.env.VUE_APP_UPDATE_TIME,
       dependencies: dependencies,
       devDependencies: devDependencies,
       config1: {
