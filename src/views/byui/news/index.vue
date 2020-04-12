@@ -87,7 +87,7 @@ export default {
       newsList: [],
       pagination: {
         total: 0,
-        page: 0,
+        page: 1,
         pageSize: 10,
       },
     };
@@ -105,7 +105,7 @@ export default {
     handleChange(val) {
       this.value = val;
       this.pagination.total = 0;
-      this.pagination.page = 0;
+      this.pagination.page = 1;
       this.pagination.pageSize = 10;
       this.fetchData();
     },
@@ -113,13 +113,19 @@ export default {
       this.listLoading = true;
       switch (this.value) {
         case "0":
-          getQdysjList(this.pagination).then((res) => {
+          getQdysjList({
+            ...this.pagination,
+            ...{ page: this.pagination.page - 1 },
+          }).then((res) => {
             this.pagination.total = res.total;
             this.newsList = res.data;
           });
           break;
         case "1":
-          getFbzbList(this.pagination).then((res) => {
+          getFbzbList({
+            ...this.pagination,
+            ...{ page: this.pagination.page - 1 },
+          }).then((res) => {
             this.pagination.total = res.total;
             this.newsList = res.data;
           });

@@ -137,12 +137,16 @@
             <a @click="handleChangeTheme">
               <el-button type="primary">修改主题和布局</el-button>
             </a>
-            <a
-              target="_blank"
-              href="//shang.qq.com/wpa/qunwpa?idkey=00db5d4f8037fb577d128c2654de0bef68d32e55a41431b07a08a1d4446bb587"
-            >
-              <el-button type="primary">讨论群</el-button>
-            </a>
+            <el-popover placement="top" width="250" trigger="hover">
+              <el-image :src="require('@/assets/ewm.png')"></el-image>
+              <a
+                slot="reference"
+                target="_blank"
+                href="//shang.qq.com/wpa/qunwpa?idkey=00db5d4f8037fb577d128c2654de0bef68d32e55a41431b07a08a1d4446bb587"
+              >
+                <el-button type="primary">官方讨论群</el-button>
+              </a>
+            </el-popover>
             <a
               target="_blank"
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
@@ -155,12 +159,6 @@
             >
               <el-button type="primary">文档</el-button>
             </a>
-            <!--<a
-              target="_blank"
-              href="http://wpa.qq.com/msgrd?v=3&uin=1204505056&site=qq&menu=yes"
-            >
-              <el-button type="primary">作者QQ</el-button>
-            </a>-->
           </div>
         </el-card>
       </el-col>
@@ -172,6 +170,7 @@
 import byuiChart from "@/plugins/echarts";
 import byuiCount from "@/plugins/byuiCount";
 import { dependencies, devDependencies } from "../../../package.json";
+
 export default {
   name: "Index",
   components: {
@@ -321,13 +320,13 @@ export default {
                   return arr[index];
                 },
                 /*color: function() {
-                                                                      return `rgb(
-                                                                      ${Math.round(
-                                                                          Math.random() * 255
-                                                                      )} , ${Math.round(
-                                                                          Math.random() * 255
-                                                                      )} , ${Math.round(Math.random() * 255)} )`;
-                                                                  }*/
+                                                                              return `rgb(
+                                                                              ${Math.round(
+                                                                                  Math.random() * 255
+                                                                              )} , ${Math.round(
+                                                                                  Math.random() * 255
+                                                                              )} , ${Math.round(Math.random() * 255)} )`;
+                                                                          }*/
               },
             },
             data: [
@@ -556,6 +555,7 @@ export default {
   .bottom-btn {
     float: right;
     margin-top: 5px;
+
     button {
       margin: 5px 0 5px 10px;
     }
