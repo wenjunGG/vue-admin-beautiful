@@ -151,7 +151,7 @@
               target="_blank"
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
             >
-              <el-button type="primary">源码获取</el-button>
+              <el-button type="primary">github下载源码点star</el-button>
             </a>
             <a
               target="_blank"
