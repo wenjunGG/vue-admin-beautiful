@@ -233,6 +233,11 @@ export const asyncRoutes = [
     component: () => import("@/views/404"),
     meta: { title: "404错误页演示", icon: "bug" },
   },
+  {
+    path: "*",
+    redirect: "/404",
+    hidden: true,
+  },
 ];
 const createRouter = () =>
   new Router({
