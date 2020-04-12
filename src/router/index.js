@@ -215,6 +215,12 @@ export const asyncRoutes = [
         component: () => import("@/views/byui/errorLog/index"),
         meta: { title: "错误日志模拟" },
       },
+      {
+        path: "more",
+        name: "More",
+        component: () => import("@/views/byui/more/index"),
+        meta: { title: "更多组件" },
+      },
     ],
   },
   {
