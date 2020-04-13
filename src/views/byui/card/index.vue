@@ -13,10 +13,7 @@
         <el-card shadow="hover">
           <div slot="header">
             <span>{{ item.title }}</span>
-            <el-switch v-model="item.switch"></el-switch>
-            <!-- <el-button type="text">操作按钮</el-button> -->
           </div>
-          <!-- <el-image :src="item.img" fit="cover" style="width:100%;height:200px"></el-image> -->
           <div style="width: 100%; height: 200px;">
             <byui-image
               :big-src="item.img"
@@ -26,19 +23,6 @@
               @clickSmall="smallClick(item)"
             ></byui-image>
           </div>
-          <el-dropdown>
-            <span class="el-dropdown-link">
-              下拉菜单
-              <i class="el-icon-arrow-down el-icon--right"></i>
-            </span>
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-              <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
         </el-card>
       </el-col>
     </el-row>

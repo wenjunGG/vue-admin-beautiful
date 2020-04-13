@@ -375,7 +375,6 @@ html {
 
       &__header {
         padding: $base-padding;
-
         & > div > span {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -383,34 +382,11 @@ html {
           width: 60%;
           display: inline-block;
         }
-
-        .el-switch {
-          float: right;
-        }
       }
-
       &__body {
         padding: $base-padding;
       }
-
-      .el-image {
-        &__inner {
-          transition: all 0.3s;
-          cursor: pointer;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-      }
-
-      .el-dropdown {
-        float: right;
-        padding: 10px 0 10px 0;
-        color: $base-color-blue;
-      }
     }
-
     /*卡片结束*/
 
     /* 下拉树样式-----------开始 */
