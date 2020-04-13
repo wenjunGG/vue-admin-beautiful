@@ -28,7 +28,6 @@ export default {
       default: function () {
         return {
           background: "#fff",
-          color: "#1890ff",
           right: "25px",
           bottom: "25px",
           width: "50px",
@@ -101,17 +100,18 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .back-to-ceiling {
   position: fixed;
   display: inline-block;
   text-align: center;
   cursor: pointer;
   z-index: 97;
+  color: $base-color-blue;
 }
 
 .back-to-ceiling:hover {
-  background: #d5dbe7;
+  background: $base-color-gray;
 }
 
 .fade-enter-active,
@@ -125,7 +125,7 @@ export default {
 }
 
 .back-to-ceiling .Icon {
-  fill: #9aaabf;
+  fill: $base-color-gray;
   background: none;
 }
 </style>
