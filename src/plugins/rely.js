@@ -91,7 +91,7 @@ if (process.env.NODE_ENV === "production") {
 }
 if (process.env.NODE_ENV !== "development") {
   console.log(
-    "\n %c " + copyright + "  %c Byui-2.3 \n\n",
+    "\n %c " + copyright + "  %c vue-admin-beautiful \n\n",
     "color: #fadfa3; background: #030307; padding:5px 0;",
     "background: #fadfa3; padding:5px 0;"
   );
