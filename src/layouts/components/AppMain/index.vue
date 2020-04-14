@@ -1,6 +1,6 @@
 <template>
   <section class="app-main-container">
-    <github-corner></github-corner>
+    <github-corner v-if="nodeEnv !== 'development'"></github-corner>
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedViews" :max="10">
         <byui-keel v-if="show" style="margin: 15px;">
@@ -33,6 +33,7 @@ export default {
   data() {
     return {
       show: true,
+      nodeEnv: process.env.NODE_ENV,
     };
   },
   computed: {

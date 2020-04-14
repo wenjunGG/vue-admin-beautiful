@@ -1,35 +1,21 @@
 @charset "utf-8";
 /* byui scss全局变量开始 */
-/*浅色风格开始*/
-$base-menu-background: #e7eaed;
-$base-menu-active-background: rgba(#1890ff, 0.5);
-$base-menu-text: #001529;
-$base-menu-text-active: #001529;
-$base-title: #001529;
-/*浅色风格结束*/
+$base-color-default: #009688;
 
-/*蓝色风格开始*/
-$base-menu-background: #2a58ad;
-$base-menu-active-background: #22468a;
-$base-menu-text: #ffffff;
-$base-menu-text-active: #ffffff;
-$base-title: #ffffff;
-/*蓝色风格结束*/
-/*黑色风格开始*/
 $base-menu-background: #001529;
-$base-menu-active-background: #009688;
+$base-menu-active-background: $base-color-default;
 $base-menu-text: #ffffff;
 $base-menu-text-active: #ffffff;
 $base-title: #ffffff;
-/*黑色风格结束*/
+
 $base-font-size-small: 12px;
 $base-font-size-default: 14px;
 $base-font-size-big: 16px;
 $base-font-size-bigger: 18px;
 $base-font-size-max: 22px;
 $base-color-header: $base-menu-background;
-$base-color-blue: #009688;
-$base-color-green: red;
+$base-color-blue: $base-color-default;
+$base-color-green: #67c23a;
 $base-color-white: #ffffff;
 $base-color-black: #000000;
 $base-color-yellow: #ffba00;

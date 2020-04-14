@@ -119,6 +119,12 @@ export const asyncRoutes = [
         meta: { title: "上传" },
       },
       {
+        path: "webUploader",
+        name: "WebUploader",
+        component: () => import("@/views/byui/webUploader/index"),
+        meta: { title: "webUploader上传" },
+      },
+      {
         path: "sticky",
         name: "Sticky",
         component: () => import("@/views/byui/sticky/index"),
