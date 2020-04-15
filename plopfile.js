@@ -5,6 +5,6 @@ const vuexGenerator = require("./plop-templates/vuex/prompt");
 module.exports = function (plop) {
   plop.setGenerator("view", viewGenerator);
   plop.setGenerator("component", componentGenerator);
-  plop.setGenerator("mock", mockGenerator);
+  plop.setGenerator("mock&api", mockGenerator);
   plop.setGenerator("vuex", vuexGenerator);
 };

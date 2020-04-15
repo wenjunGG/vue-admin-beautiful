@@ -2,7 +2,7 @@ const { notEmpty } = require("../utils.js");
 
 module.exports = {
   description:
-    "\u535a\u4e91\u524d\u7aef\u654f\u6377\u5f00\u53d1\u5e73\u53f0\u521b\u5efa\u0063\u006f\u006d\u0070\u006f\u006e\u0065\u006e\u0074",
+    "\u521b\u5efa\u0063\u006f\u006d\u0070\u006f\u006e\u0065\u006e\u0074",
   prompts: [
     {
       type: "input",
