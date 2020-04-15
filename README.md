@@ -23,6 +23,8 @@
 
 ## qq 1204505056 微信 chu1204505056 官方问题解答知识分享群[972435319](//shang.qq.com/wpa/qunwpa?idkey=00db5d4f8037fb577d128c2654de0bef68d32e55a41431b07a08a1d4446bb587)
 
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
+
 ## 鸣谢 花裤衩的开源项目给了我很多灵感
 
 ## 感谢
