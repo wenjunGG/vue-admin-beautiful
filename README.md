@@ -16,7 +16,6 @@
 ## 简介
 
 演示地址:[vue-admin-beautiful](http://chu1204505056.gitee.io/vue-admin-beautiful)
-演示地址(备份,图标可能存在跨域):[vue-admin-beautiful](http://chu1204505056.gitee.io)
 
 ## 梦想
 
