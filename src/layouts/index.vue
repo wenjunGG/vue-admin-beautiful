@@ -252,9 +252,9 @@ export default {
             width: calc(100% - 10px) !important;
           }
 
-          .app-main-container {
+          /*.app-main-container {
             width: calc(100% - 30px) !important;
-          }
+          }*/
         }
       }
 
