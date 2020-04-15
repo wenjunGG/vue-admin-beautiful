@@ -12,10 +12,6 @@ html {
     text-rendering: optimizeLegibility;
     font-size: $base-font-size-default;
 
-    .el-menu.el-menu--popup.el-menu--popup-right-start {
-      max-height: 90vh;
-      overflow-y: scroll;
-    }
     svg,
     i {
       &:hover {
@@ -190,30 +186,6 @@ html {
 
     /*进度条结束*/
 
-    /*头部头像开始*/
-    .nav-bar-container {
-      .right-menu {
-        line-height: 21px;
-
-        .avatar-container {
-          .avatar-wrapper {
-            .user-avatar {
-              border-radius: 99px;
-            }
-          }
-        }
-      }
-    }
-
-    .el-dropdown-menu {
-      .el-popper {
-        .user-dropdown {
-          top: 100px;
-        }
-      }
-    }
-
-    /*头部头像结束*/
     /*表格开始*/
 
     .el-table {
@@ -266,11 +238,20 @@ html {
     }
 
     /*分页结束*/
-    /*纵向菜单开始*/
+
+    /*菜单开始*/
+    .el-menu.el-menu--popup.el-menu--popup-right-start {
+      max-height: 90vh;
+      overflow-y: scroll;
+    }
+    .el-menu.el-menu--popup.el-menu--popup-bottom-start {
+      max-height: 80vh;
+      overflow-y: scroll;
+    }
     .el-menu--vertical {
       .el-menu-item {
-        height: 36px !important;
-        line-height: 36px !important;
+        height: 46px !important;
+        line-height: 46px !important;
 
         &.is-active {
           background-color: $base-menu-active-background !important;
@@ -278,7 +259,7 @@ html {
       }
     }
 
-    /*纵向菜单结束*/
+    /*菜单结束*/
     /*tag开始*/
     .el-tag {
       &--small {

@@ -251,6 +251,10 @@ export default {
             margin: 5px !important;
             width: calc(100% - 10px) !important;
           }
+
+          .app-main-container {
+            width: calc(100% - 30px) !important;
+          }
         }
       }
 
@@ -258,10 +262,6 @@ export default {
         .fixed-header {
           left: 0 !important;
           width: 100% !important;
-        }
-
-        .app-main-container {
-          width: calc(100% - 30px) !important;
         }
       }
 
