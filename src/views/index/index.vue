@@ -141,6 +141,11 @@
             >
               <el-button type="primary">github下载源码点star</el-button>
             </a>
+            <a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1476">
+              <el-button type="primary"
+                >国内源码下载通道（记得给个好评）</el-button
+              >
+            </a>
             <a
               target="_blank"
               href="https://chu1204505056.gitee.io/byui-bookmarks/guide/"
