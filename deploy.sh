@@ -18,3 +18,7 @@ cd -
 cd -
 rimraf dist
 exec /bin/bash
+
+
+
+
