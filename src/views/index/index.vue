@@ -160,7 +160,7 @@
             <el-popover placement="top" width="250" trigger="hover">
               <el-image :src="require('@/assets/wx_ewm.png')"></el-image>
               <p>
-                添加好友时请附带，付款人名称信息，我一定努力让你觉得物超所值
+                添加好友时请附带，付款人名称信息，我一定努力让你觉得物超所值，当然一切都是在你自愿的基础上
               </p>
               <p>QQ:1204505056</p>
               <p>微信:chu1204505056</p>
@@ -520,7 +520,7 @@ export default {
   .card {
     ::v-deep {
       .el-card__body {
-        height: 305px;
+        height: 355px;
 
         .echarts {
           width: 100%;
