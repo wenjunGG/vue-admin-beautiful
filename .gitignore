@@ -6,8 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 tests/**/coverage/
-
-# Editor directories and files
 .idea
 .vscode
 *.suo
@@ -15,4 +13,4 @@ tests/**/coverage/
 *.njsproj
 *.sln
 /public/video/
-/vue-element-admin-beautiful.zip
+/vue-admin-beautiful.zip
