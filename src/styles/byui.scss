@@ -244,10 +244,12 @@ html {
       max-height: 90vh;
       overflow-y: scroll;
     }
+
     .el-menu.el-menu--popup.el-menu--popup-bottom-start {
       max-height: 80vh;
       overflow-y: scroll;
     }
+
     .el-menu--vertical {
       .el-menu-item {
         height: 46px !important;
@@ -276,34 +278,20 @@ html {
       padding: 8px 20px;
       border-radius: $base-border-radius;
       font-size: $base-font-size-default;
+
       button:hover::before {
         transform-origin: center;
         transform: scaleX(1);
       }
     }
+
     /*按钮结束*/
     /*弹窗开始*/
-    .el-dialog {
-      display: flex;
-      flex-direction: column;
-      margin: 0 !important;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-height: calc(100% - 30px);
-      max-width: calc(100% - 30px);
-    }
 
     .el-dialog,
     .el-message-box {
-      border-radius: $base-border-radius;
-
       &__body {
         border-top: 1px solid $base-border-color;
-        overflow: auto;
-        color: #666666;
-
         .el-form {
           padding-right: 30px;
         }
@@ -356,6 +344,7 @@ html {
 
       &__header {
         padding: $base-padding;
+
         & > div > span {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -363,10 +352,12 @@ html {
           width: 60%;
         }
       }
+
       &__body {
         padding: $base-padding;
       }
     }
+
     /*卡片结束*/
 
     /* 下拉树样式-----------开始 */
