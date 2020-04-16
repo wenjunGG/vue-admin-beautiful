@@ -30,13 +30,17 @@
   </div>
 </template>
 <script>
-let id = 0;
-let id2 = 0;
 export default {
+  name: "Test",
   data() {
     return {};
   },
-
+  created() {
+    alert("created");
+  },
+  mounted() {
+    alert("mounted");
+  },
   methods: {},
 };
 </script>
