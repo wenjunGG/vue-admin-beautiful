@@ -165,10 +165,26 @@
               <p>QQ:1204505056</p>
               <p>微信:chu1204505056</p>
               <a slot="reference" target="_blank">
-                <el-button type="warning">一对一问题解答</el-button>
+                <el-button type="warning">一对一问题解答（量力而行）</el-button>
               </a>
             </el-popover>
           </div>
+        </el-card>
+      </el-col>
+      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+        <el-card class="card" shadow="never">
+          <div slot="header">
+            <span>更新日志</span>
+          </div>
+          <el-timeline :reverse="reverse">
+            <el-timeline-item
+              v-for="(activity, index) in activities"
+              :key="index"
+              :timestamp="activity.timestamp"
+            >
+              {{ activity.content }}
+            </el-timeline-item>
+          </el-timeline>
         </el-card>
       </el-col>
     </el-row>
@@ -179,6 +195,7 @@
 import byuiChart from "@/plugins/echarts";
 import byuiCount from "@/plugins/byuiCount";
 import { dependencies, devDependencies } from "../../../package.json";
+import { getList } from "@/api/changeLog";
 
 export default {
   name: "Index",
@@ -330,13 +347,13 @@ export default {
                   return arr[index];
                 },
                 /*color: function() {
-                                                                                    return `rgb(
-                                                                                    ${Math.round(
-                                                                                        Math.random() * 255
-                                                                                    )} , ${Math.round(
-                                                                                        Math.random() * 255
-                                                                                    )} , ${Math.round(Math.random() * 255)} )`;
-                                                                                }*/
+                                                                                        return `rgb(
+                                                                                        ${Math.round(
+                                                                                            Math.random() * 255
+                                                                                        )} , ${Math.round(
+                                                                                            Math.random() * 255
+                                                                                        )} , ${Math.round(Math.random() * 255)} )`;
+                                                                                    }*/
               },
             },
             data: [
@@ -489,7 +506,13 @@ export default {
           },
         ],
       },
+      //更新日志
+      reverse: true,
+      activities: [],
     };
+  },
+  created() {
+    this.fetchData();
   },
   mounted() {},
   methods: {
@@ -499,6 +522,11 @@ export default {
     handleZrClick(e) {},
     handleChangeTheme() {
       this.$baseEventBus.$emit("theme");
+    },
+    fetchData() {
+      getList().then((res) => {
+        this.activities = res.data;
+      });
     },
   },
 };
@@ -521,6 +549,7 @@ export default {
     ::v-deep {
       .el-card__body {
         height: 355px;
+        overflow-y: scroll;
 
         .echarts {
           width: 100%;
