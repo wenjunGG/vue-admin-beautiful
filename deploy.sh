@@ -16,4 +16,5 @@ git push -f "https://${access_token}@github.com/chuzhixin/vue-admin-beautiful.gi
 cd -
 cd -
 rimraf dist
+start "https://gitee.com/chu1204505056/vue-admin-beautiful/pages"
 exec /bin/bash
