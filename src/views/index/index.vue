@@ -1,14 +1,7 @@
 <template>
   <div class="index-container">
     <el-row :gutter="15">
-      <el-col
-        v-if="nodeEnv !== 'development'"
-        :xs="24"
-        :sm="24"
-        :md="24"
-        :lg="24"
-        :xl="24"
-      >
+      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <el-alert
           title="世间本无事,庸人自扰之,框架发布以来,免不了质疑和嘲笑,但我从未放弃,我只想靠自己的双手堂堂正正的赚钱,尽管一直没有赚到过......"
           type="success"
@@ -110,7 +103,7 @@
         <el-card class="card" shadow="never">
           <div slot="header">
             <span>版本信息</span>
-            <div style="float: right;">系统部署时间:{{ updateTime }}</div>
+            <div style="float: right;">部署时间:{{ updateTime }}</div>
           </div>
           <table class="table">
             <tr>
@@ -138,7 +131,7 @@
               <td>{{ dependencies.axios }}</td>
             </tr>
           </table>
-          <div v-if="nodeEnv !== 'development'" class="bottom-btn">
+          <div class="bottom-btn">
             <a @click="handleChangeTheme">
               <el-button type="primary">修改主题和布局</el-button>
             </a>
