@@ -23,19 +23,20 @@
               alt="401"
               class="pic-error-child"
               src="@/assets/error_images/cloud.png"
-            /></div
-        ></el-col>
+            />
+          </div>
+        </el-col>
 
-        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12"
-          ><div class="bullshit">
+        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+          <div class="bullshit">
             <div class="bullshit-oops">{{ oops }}</div>
             <div class="bullshit-headline">{{ headline }}</div>
             <div class="bullshit-info">{{ info }}</div>
-            <a class="bullshit-return-home" href="/"
-              >{{ jumpTime }}s&nbsp;{{ btn }}</a
-            >
-          </div></el-col
-        >
+            <a class="bullshit-return-home" href="#/index">
+              {{ jumpTime }}s&nbsp;{{ btn }}
+            </a>
+          </div>
+        </el-col>
       </el-row>
     </div>
   </div>

@@ -553,7 +553,7 @@ export default {
   .card {
     ::v-deep {
       .el-card__body {
-        height: 355px;
+        height: 390px;
         overflow-y: scroll;
 
         .echarts {
