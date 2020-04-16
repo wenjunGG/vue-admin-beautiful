@@ -135,16 +135,6 @@
             <a @click="handleChangeTheme">
               <el-button type="primary">修改主题和布局</el-button>
             </a>
-            <el-popover placement="top" width="250" trigger="hover">
-              <el-image :src="require('@/assets/ewm.png')"></el-image>
-              <a
-                slot="reference"
-                target="_blank"
-                href="//shang.qq.com/wpa/qunwpa?idkey=00db5d4f8037fb577d128c2654de0bef68d32e55a41431b07a08a1d4446bb587"
-              >
-                <el-button type="primary">官方讨论群</el-button>
-              </a>
-            </el-popover>
             <a
               target="_blank"
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
@@ -157,6 +147,27 @@
             >
               <el-button type="primary">文档</el-button>
             </a>
+            <el-popover placement="top" width="250" trigger="hover">
+              <el-image :src="require('@/assets/ewm.png')"></el-image>
+              <a
+                slot="reference"
+                target="_blank"
+                href="//shang.qq.com/wpa/qunwpa?idkey=00db5d4f8037fb577d128c2654de0bef68d32e55a41431b07a08a1d4446bb587"
+              >
+                <el-button type="warning">官方讨论群</el-button>
+              </a>
+            </el-popover>
+            <el-popover placement="top" width="250" trigger="hover">
+              <el-image :src="require('@/assets/wx_ewm.png')"></el-image>
+              <p>
+                添加好友时请附带，付款人名称信息，我一定努力让你觉得物超所值
+              </p>
+              <p>QQ:1204505056</p>
+              <p>微信:chu1204505056</p>
+              <a slot="reference" target="_blank">
+                <el-button type="warning">一对一问题解答</el-button>
+              </a>
+            </el-popover>
           </div>
         </el-card>
       </el-col>
@@ -319,13 +330,13 @@ export default {
                   return arr[index];
                 },
                 /*color: function() {
-                                                                                  return `rgb(
-                                                                                  ${Math.round(
-                                                                                      Math.random() * 255
-                                                                                  )} , ${Math.round(
-                                                                                      Math.random() * 255
-                                                                                  )} , ${Math.round(Math.random() * 255)} )`;
-                                                                              }*/
+                                                                                    return `rgb(
+                                                                                    ${Math.round(
+                                                                                        Math.random() * 255
+                                                                                    )} , ${Math.round(
+                                                                                        Math.random() * 255
+                                                                                    )} , ${Math.round(Math.random() * 255)} )`;
+                                                                                }*/
               },
             },
             data: [
