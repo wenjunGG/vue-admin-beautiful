@@ -1,7 +1,6 @@
 import { layout, loadingText, messageDuration, title } from "@/settings";
 import * as lodash from "lodash";
 import { Loading, Message, MessageBox, Notification } from "element-ui";
-import x2js from "x2js";
 import store from "@/store";
 import { getAccessToken } from "@/utils/accessToken";
 
@@ -176,8 +175,6 @@ const install = (Vue, opts = {}) => {
 
   /* 全局lodash */
   Vue.prototype.$baseLodash = lodash;
-  /* 全局x2js */
-  Vue.prototype.$baseX2js = new x2js();
   /* 全局事件总线 */
   Vue.prototype.$baseEventBus = new Vue();
 };

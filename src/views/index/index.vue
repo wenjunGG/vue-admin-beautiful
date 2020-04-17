@@ -6,6 +6,15 @@
           title="世间本无事,庸人自扰之,框架发布以来,免不了质疑和嘲笑,但我从未放弃,我只想靠自己的双手堂堂正正的赚钱,尽管一直没有赚到过......"
           type="success"
         >
+          <a
+            target="_blank"
+            href="https://github.com/chuzhixin/vue-element-admin-beautiful"
+          >
+            <img
+              style="height: 100%;"
+              src="https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?style=social"
+            />
+          </a>
         </el-alert>
         <br />
       </el-col>
@@ -139,12 +148,14 @@
               target="_blank"
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
             >
-              <el-button type="primary">github下载源码点star</el-button>
+              <el-button type="primary">
+                github下载源码点star
+              </el-button>
             </a>
             <a target="_blank" href="https://ext.dcloud.net.cn/plugin?id=1476">
               <el-button type="primary"
-                >国内源码下载通道（记得给个好评）</el-button
-              >
+                >国内源码下载通道（记得给个好评）
+              </el-button>
             </a>
             <a
               target="_blank"
@@ -352,13 +363,13 @@ export default {
                   return arr[index];
                 },
                 /*color: function() {
-                                                                                        return `rgb(
-                                                                                        ${Math.round(
-                                                                                            Math.random() * 255
-                                                                                        )} , ${Math.round(
-                                                                                            Math.random() * 255
-                                                                                        )} , ${Math.round(Math.random() * 255)} )`;
-                                                                                    }*/
+                                                                                          return `rgb(
+                                                                                          ${Math.round(
+                                                                                              Math.random() * 255
+                                                                                          )} , ${Math.round(
+                                                                                              Math.random() * 255
+                                                                                          )} , ${Math.round(Math.random() * 255)} )`;
+                                                                                      }*/
               },
             },
             data: [
