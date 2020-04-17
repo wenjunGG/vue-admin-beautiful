@@ -23,6 +23,10 @@ const data = [
     content: "修复群友反馈的bug",
     timestamp: "2018-04-16",
   },
+  {
+    content: "剔除maptalks",
+    timestamp: "2018-04-17",
+  },
 ];
 
 export default [
