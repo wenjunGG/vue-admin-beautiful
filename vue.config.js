@@ -83,13 +83,6 @@ module.exports = {
         new webpack.DefinePlugin({
           "process.env.VUE_APP_UPDATE_TIME": time,
         }),
-        new CompressionWebpackPlugin({
-          filename: "[path].gz[query]",
-          algorithm: "gzip",
-          test: new RegExp("\\.(" + productionGzipExtensions.join("|") + ")$"),
-          threshold: 8192,
-          minRatio: 0.8,
-        }),
         new WebpackBar({
           name: `\u0062\u0079\u0075\u0069\u524d\u7aef\u654f\u6377\u5f00\u53d1\u5e73\u53f0${pkg.name}`,
         }),
@@ -100,14 +93,6 @@ module.exports = {
     config.plugins.delete("preload");
     config.plugins.delete("prefetch");
     config.resolve.symlinks(true);
-    config.module
-      .rule("images")
-      .use("image-webpack-loader")
-      .loader("image-webpack-loader")
-      .options({
-        bypassOnDebug: true,
-      })
-      .end();
     config.module.rule("svg").exclude.add(resolve("src/icons")).end();
     config.module
       .rule("icons")
@@ -116,9 +101,7 @@ module.exports = {
       .end()
       .use("svg-sprite-loader")
       .loader("svg-sprite-loader")
-      .options({
-        symbolId: "icon-[name]",
-      })
+      .options({ symbolId: "icon-[name]" })
       .end();
     config.module
       .rule("vue")
@@ -129,13 +112,12 @@ module.exports = {
         return options;
       })
       .end();
-    config.when(process.env.NODE_ENV === "development", (config) =>
-      config.devtool("cheap-module-eval-source-map")
-    );
+    config.when(process.env.NODE_ENV === "development", (config) => {
+      config.devtool("cheap-module-eval-source-map");
+    });
     config.when(process.env.NODE_ENV !== "development", (config) => {
       config.performance.set("hints", false);
       config.devtool("cheap-module-source-map");
-
       config
         .plugin("ScriptExtHtmlWebpackPlugin")
         .after("html")
@@ -168,27 +150,49 @@ module.exports = {
           },
         },
       });
-
+      config.optimization.runtimeChunk("single");
+      config.module
+        .rule("images")
+        .use("image-webpack-loader")
+        .loader("image-webpack-loader")
+        .options({ bypassOnDebug: true })
+        .end();
+      config
+        .plugin("compression")
+        .use(CompressionWebpackPlugin, [
+          {
+            filename: "[path].gz[query]",
+            algorithm: "gzip",
+            test: new RegExp(
+              "\\.(" + productionGzipExtensions.join("|") + ")$"
+            ),
+            threshold: 8192,
+            minRatio: 0.8,
+          },
+        ])
+        .end();
       config
         .plugin("banner")
         .use(webpack.BannerPlugin, [
           `\u0062\u0079\u0075\u0069\u524d\u7aef\u654f\u6377\u5f00\u53d1\u5e73\u53f0 : ${pkg.name}\n copyright:\u0031\u0032\u0030\u0034\u0035\u0030\u0035\u0030\u0035\u0036\u0040\u0071\u0071\u002e\u0063\u006f\u006d \n author: ${pkg.author} \n participants: ${pkg.participants}\n time: ${time}`,
-        ]);
-      config.plugin("fileManager").use(FileManagerPlugin, [
-        {
-          onEnd: {
-            delete: ["./dist/video", "./dist/data"],
-            archive: [
-              {
-                source: "./dist",
-                destination: `./dist/${abbreviation}_dist_${year}.${month}.${day}.7z`,
-              },
-            ],
+        ])
+        .end();
+      config
+        .plugin("fileManager")
+        .use(FileManagerPlugin, [
+          {
+            onEnd: {
+              delete: ["./dist/video", "./dist/data"],
+              archive: [
+                {
+                  source: "./dist",
+                  destination: `./dist/${abbreviation}_dist_${year}.${month}.${day}.7z`,
+                },
+              ],
+            },
           },
-        },
-      ]);
-
-      config.optimization.runtimeChunk("single");
+        ])
+        .end();
     });
   },
   runtimeCompiler: true,
